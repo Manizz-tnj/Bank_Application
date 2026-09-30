@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex National Bank - Secure Online Banking</title>
+    <!-- Bootstrap 5 CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Real Bank Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bank py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-shield-lock-fill me-2 fs-3 text-warning"></i>
+                <div class="d-inline-block">
+                    <span class="d-block lh-1 fw-bold tracking-wide">APEX NATIONAL BANK</span>
+                    <span class="d-block small text-light opacity-75" style="font-size: 0.7rem; letter-spacing: 1px;">INSTITUTIONAL TRUST &bull; EST. 1924</span>
+                </div>
+            </a>
+            <div class="d-flex align-items-center text-light small gap-4 d-none d-lg-flex">
+                <span><i class="bi bi-telephone-fill text-warning me-1"></i> 24/7 Priority Desk: 1-800-555-APEX</span>
+                <span><i class="bi bi-shield-check text-success me-1"></i> End-to-End Encrypted Core</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container my-5">
+        <div class="row align-items-center g-5">
+            <!-- Left Info Panel -->
+            <div class="col-lg-6">
+                <div class="d-inline-flex align-items-center gap-2 badge bg-primary-subtle text-primary fw-bold mb-3 px-3 py-2 rounded-pill">
+                    <i class="bi bi-award-fill text-warning"></i> Certified Digital Banking Platform
+                </div>
+                <h1 class="display-5 fw-bold mb-3 text-dark">Institutional Security. Personal Financial Freedom.</h1>
+                <p class="lead text-secondary mb-4">
+                    Open an authentic bank account online in minutes with real-time KYC onboarding, multi-portfolio balance management, and automated fraud-defense surveillance.
+                </p>
+
+                <!-- High Trust Value Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white rounded-3 border shadow-sm h-100">
+                            <i class="bi bi-wallet-fill text-primary fs-3 mb-2 d-block"></i>
+                            <h6 class="fw-bold mb-1">Instant Account Opening</h6>
+                            <p class="small text-muted mb-0">Open Savings or Current accounts with real-time ledger provisioning.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white rounded-3 border shadow-sm h-100">
+                            <i class="bi bi-shield-fill-check text-success fs-3 mb-2 d-block"></i>
+                            <h6 class="fw-bold mb-1">Automated Fraud Shield</h6>
+                            <p class="small text-muted mb-0">High-value transaction surveillance and 3-attempt brute-force protection.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white rounded-3 border shadow-sm h-100">
+                            <i class="bi bi-person-vcard text-info fs-3 mb-2 d-block"></i>
+                            <h6 class="fw-bold mb-1">Full KYC Portfolio & CIF</h6>
+                            <p class="small text-muted mb-0">Access complete profile details, branch routing numbers, and statements.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white rounded-3 border shadow-sm h-100">
+                            <i class="bi bi-arrow-repeat text-warning fs-3 mb-2 d-block"></i>
+                            <h6 class="fw-bold mb-1">Atomic Fund Routing</h6>
+                            <p class="small text-muted mb-0">Guaranteed real-time transfers with double-entry debit/credit ledger tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Authentication & Onboarding Card -->
+            <div class="col-lg-6">
+                <div class="bank-card p-4 p-md-5">
+                    <ul class="nav nav-pills nav-fill mb-4 p-1 bg-light rounded-3" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold" id="customer-tab" data-bs-toggle="tab" data-bs-target="#customerPane" type="button" role="tab">
+                                <i class="bi bi-box-arrow-in-right me-1"></i> Sign In
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold" id="register-tab" data-bs-toggle="tab" data-bs-target="#registerPane" type="button" role="tab">
+                                <i class="bi bi-person-plus-fill me-1"></i> Open Account
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold" id="staff-tab" data-bs-toggle="tab" data-bs-target="#staffPane" type="button" role="tab">
+                                <i class="bi bi-shield-lock me-1"></i> Staff Portal
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="authTabsContent">
+                        <!-- Sign In Pane -->
+                        <div class="tab-pane fade show active" id="customerPane" role="tabpanel">
+                            <div class="mb-3 text-center text-md-start">
+                                <h5 class="fw-bold mb-1">Online Banking Login</h5>
+                                <p class="text-muted small">Enter your Customer ID (CIF) or registered email address.</p>
+                            </div>
+                            <form id="customerLoginForm">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold small">Customer ID or Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-person-badge text-primary"></i></span>
+                                        <input type="text" class="form-control" id="custUsername" placeholder="e.g. CUST-10001 or your email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold small">Security PIN</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-key-fill text-primary"></i></span>
+                                        <input type="password" class="form-control" id="custPin" placeholder="4-6 digit numeric PIN" maxlength="6" required>
+                                    </div>
+                                    <div class="form-text text-muted small"><i class="bi bi-shield-check text-success"></i> 3 failed attempts will trigger an automated security hold.</div>
+                                </div>
+                                <button type="submit" class="btn btn-primary-bank w-100 py-2">
+                                    <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to My Account
+                                </button>
+                                <div class="text-center mt-3">
+                                    <span class="text-muted small">Don't have an account? </span>
+                                    <a href="#" class="small fw-bold text-decoration-none" onclick="document.getElementById('register-tab').click(); return false;">Open an Account Online</a>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Real Bank KYC Registration Pane -->
+                        <div class="tab-pane fade" id="registerPane" role="tabpanel">
+                            <div class="mb-3 text-center text-md-start">
+                                <h5 class="fw-bold mb-1">Open a Real Bank Account Online</h5>
+                                <p class="text-muted small">Complete quick digital KYC verification to activate your account immediately.</p>
+                            </div>
+                            <form id="customerRegisterForm">
+                                <div class="row g-2 mb-2">
+                                    <div class="col-sm-7">
+                                        <label class="form-label small fw-semibold">Legal Full Name</label>
+                                        <input type="text" class="form-control form-control-sm" id="regName" placeholder="As shown on Government ID" required>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label class="form-label small fw-semibold">Date of Birth</label>
+                                        <input type="date" class="form-control form-control-sm" id="regDob" required>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-sm-6">
+                                        <label class="form-label small fw-semibold">Government / Tax ID</label>
+                                        <input type="text" class="form-control form-control-sm" id="regGovId" placeholder="Passport / SSN / National ID" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label small fw-semibold">Mobile Phone Number</label>
+                                        <input type="tel" class="form-control form-control-sm" id="regPhone" placeholder="+1234567890" required>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label small fw-semibold">Email Address</label>
+                                    <input type="email" class="form-control form-control-sm" id="regEmail" placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label small fw-semibold">Residential Address</label>
+                                    <input type="text" class="form-control form-control-sm" id="regAddress" placeholder="Street, City, State, ZIP" required>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-sm-6">
+                                        <label class="form-label small fw-semibold">Account Type</label>
+                                        <select class="form-select form-select-sm" id="regAccountType" onchange="updateMinDepositNotice()">
+                                            <option value="SAVINGS" selected>Savings Account (4.0% APY)</option>
+                                            <option value="CURRENT">Current Account (Overdraft)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label small fw-semibold">Opening Deposit ($)</label>
+                                        <input type="number" class="form-control form-control-sm" id="regInitialDeposit" min="1000" step="0.01" value="1000" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold">Set 4-6 Digit Security PIN</label>
+                                    <input type="password" class="form-control form-control-sm" id="regPin" placeholder="4-6 numeric digits" maxlength="6" pattern="^[0-9]{4,6}$" required>
+                                    <div class="form-text text-muted" style="font-size: 0.75rem;">Must be 4-6 digits. Avoid repetitive (0000) or sequential (1234) combinations.</div>
+                                </div>
+                                <div class="p-2 bg-light border rounded small text-muted mb-3" id="depositNotice">
+                                    <i class="bi bi-info-circle text-primary me-1"></i> Savings accounts require a minimum opening deposit of $1,000.00.
+                                </div>
+                                <button type="submit" class="btn btn-success w-100 py-2 fw-semibold">
+                                    <i class="bi bi-check2-circle me-1"></i> Complete KYC &amp; Open Account
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Staff / Admin Portal Pane -->
+                        <div class="tab-pane fade" id="staffPane" role="tabpanel">
+                            <div class="mb-3 text-center text-md-start">
+                                <h5 class="fw-bold mb-1">Apex Staff &amp; Management Portal</h5>
+                                <p class="text-muted small">Authorized banking personnel &amp; executive access only.</p>
+                            </div>
+                            <form id="staffLoginForm">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold small">Staff ID</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-shield-lock text-dark"></i></span>
+                                        <input type="text" class="form-control" id="staffUsername" placeholder="e.g. ADM-101 or EMP-2001" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold small">Staff Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-lock-fill text-dark"></i></span>
+                                        <input type="password" class="form-control" id="staffPassword" placeholder="Staff Security Password" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 py-2 fw-semibold">
+                                    <i class="bi bi-shield-check me-1"></i> Authenticate Staff Session
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast Container -->
+    <div id="alertContainer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 Apex National Bank &amp; Trust Corporation. Member FDIC. Equal Housing Lender.</p>
+            <p class="small text-muted mb-0">Powered by Java 21 &bull; Spring Boot &bull; Spring Data JPA &bull; Hibernate ORM &bull; Spring Security</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        function updateMinDepositNotice() {
+            const type = document.getElementById('regAccountType').value;
+            const depositInput = document.getElementById('regInitialDeposit');
+            const notice = document.getElementById('depositNotice');
+            if (type === 'CURRENT') {
+                depositInput.min = "2000";
+                if (parseFloat(depositInput.value) < 2000) depositInput.value = "2000";
+                notice.innerHTML = '<i class="bi bi-info-circle text-primary me-1"></i> Current accounts require a minimum opening deposit of $2,000.00.';
+            } else {
+                depositInput.min = "1000";
+                notice.innerHTML = '<i class="bi bi-info-circle text-primary me-1"></i> Savings accounts require a minimum opening deposit of $1,000.00.';
+            }
+        }
+
+        // Customer Login
+        document.getElementById('customerLoginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('custUsername').value.trim();
+            const password = document.getElementById('custPin').value.trim();
+
+            try {
+                const res = await api.auth.login(username, password);
+                if (res.role === 'CUSTOMER') {
+                    auth.setUser(res);
+                    window.location.href = 'customer-dashboard.html';
+                } else {
+                    auth.showNotification('Staff credentials detected. Please switch to the Staff Portal tab.', 'warning');
+                }
+            } catch (err) {
+                auth.showNotification(err.message, 'danger');
+            }
+        });
+
+        // Staff Login
+        document.getElementById('staffLoginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('staffUsername').value.trim();
+            const password = document.getElementById('staffPassword').value.trim();
+
+            try {
+                const res = await api.auth.login(username, password);
+                auth.setUser(res);
+                if (res.role === 'ADMIN') {
+                    window.location.href = 'admin-dashboard.html';
+                } else if (res.role === 'EMPLOYEE') {
+                    window.location.href = 'employee-dashboard.html';
+                } else {
+                    auth.showNotification('Please use Customer Sign In for customer accounts.', 'warning');
+                }
+            } catch (err) {
+                auth.showNotification(err.message, 'danger');
+            }
+        });
+
+        // Real KYC Registration
+        document.getElementById('customerRegisterForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('regName').value.trim(),
+                dob: document.getElementById('regDob').value,
+                governmentId: document.getElementById('regGovId').value.trim(),
+                email: document.getElementById('regEmail').value.trim(),
+                phone: document.getElementById('regPhone').value.trim(),
+                address: document.getElementById('regAddress').value.trim(),
+                initialAccountType: document.getElementById('regAccountType').value,
+                initialDeposit: parseFloat(document.getElementById('regInitialDeposit').value),
+                pin: document.getElementById('regPin').value.trim()
+            };
+
+            try {
+                const res = await api.auth.register(data);
+                const primaryAcc = res.accountIds && res.accountIds.length > 0 ? res.accountIds[0] : 'Provisioned';
+                auth.showNotification(`Account Activated! Your Customer ID is: ${res.customerId}. Primary Account: ${primaryAcc}. You can now sign in.`, 'success');
+                document.getElementById('customerRegisterForm').reset();
+                
+                // Switch to Sign In tab and fill Customer ID
+                const customerTab = new bootstrap.Tab(document.getElementById('customer-tab'));
+                customerTab.show();
+                document.getElementById('custUsername').value = res.customerId;
+            } catch (err) {
+                auth.showNotification(err.message, 'danger');
+            }
+        });
+    </script>
+</body>
+</html>

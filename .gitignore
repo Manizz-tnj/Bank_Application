@@ -28,7 +28,3 @@ replay_pid*
 # OS generated files
 .DS_Store
 Thumbs.db
-
-# Runtime data (preserve directory, ignore files if generated)
-data/*.dat
-!data/.gitkeep

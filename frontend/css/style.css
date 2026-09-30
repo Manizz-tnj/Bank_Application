@@ -1,0 +1,160 @@
+/* Modern Professional Banking Theme */
+:root {
+    --primary-color: #0d47a1;
+    --primary-dark: #002171;
+    --primary-light: #5472d3;
+    --secondary-color: #00897b;
+    --accent-color: #ff9800;
+    --danger-color: #d32f2f;
+    --success-color: #2e7d32;
+    --dark-bg: #0b1325;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar-bank {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.25rem;
+}
+
+/* Cards & Surfaces */
+.bank-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bank-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+.account-card {
+    border-left: 5px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.account-card.current {
+    border-left-color: var(--secondary-color);
+}
+
+.account-card.fixed-deposit {
+    border-left-color: var(--accent-color);
+}
+
+.account-balance {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+/* Metric / Stat Cards */
+.stat-card {
+    border-radius: 12px;
+    padding: 1.25rem;
+    color: white;
+}
+
+.stat-card.blue {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.stat-card.green {
+    background: linear-gradient(135deg, #065f46, #10b981);
+}
+
+.stat-card.orange {
+    background: linear-gradient(135deg, #9a3412, #f97316);
+}
+
+.stat-card.red {
+    background: linear-gradient(135deg, #991b1b, #ef4444);
+}
+
+/* Status Badges */
+.badge-active {
+    background-color: #dcfce7;
+    color: #15803d;
+    font-weight: 600;
+}
+
+.badge-locked {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    font-weight: 600;
+}
+
+.badge-closed {
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* Tables */
+.table-bank {
+    vertical-align: middle;
+}
+
+.table-bank thead th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+/* Buttons */
+.btn-primary-bank {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.6rem 1.25rem;
+}
+
+.btn-primary-bank:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+}
+
+/* Alerts Toast & Notifications */
+#alertContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    min-width: 320px;
+    max-width: 450px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
